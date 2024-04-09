@@ -40,3 +40,10 @@ jobs:
             
         - name: check exit code
           run: echo $?
+        
+        - name: fmt
+          run: go fmt ./...
+          
+        - name: install StaticCheck
+          run: go install honnef.co/go/tools/cmd/staticcheck@latest
+ 
