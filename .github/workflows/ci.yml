@@ -31,4 +31,4 @@ jobs:
           run: test -z $(go fmt ./..)
             
         - name: check exit code
-          run: echo $?
+          run: echo $?git 
