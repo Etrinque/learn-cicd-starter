@@ -49,3 +49,15 @@ jobs:
         - name: StaticCheck
           run: staticcheck ./...
  
+    security:
+      name: Security Test
+      runs-on: ubuntu-latest
+
+      steps:
+
+      - name: Install gosec
+        run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+
+      - name: Run GoSec
+        run: gosec ./...
+
